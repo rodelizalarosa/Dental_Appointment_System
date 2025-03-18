@@ -38,7 +38,7 @@ public class LogIn extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Hashing error", "Error", JOptionPane.ERROR_MESSAGE);
         return null;
     }
-}
+    }
   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -112,6 +112,7 @@ public class LogIn extends javax.swing.JFrame {
         login_panel.add(errorUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 190, 20));
 
         password.setBackground(new java.awt.Color(204, 255, 204));
+        password.setFont(new java.awt.Font("Trebuchet MS", 0, 15)); // NOI18N
         password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 passwordFocusGained(evt);
@@ -138,6 +139,7 @@ public class LogIn extends javax.swing.JFrame {
         login_panel.add(username2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 90, -1));
 
         username.setBackground(new java.awt.Color(204, 255, 204));
+        username.setFont(new java.awt.Font("Trebuchet MS", 0, 15)); // NOI18N
         username.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 usernameFocusLost(evt);
@@ -243,18 +245,18 @@ public class LogIn extends javax.swing.JFrame {
 
     private void passwordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordFocusLost
         
-//        String pass = password.getText();
-//
-//        if (pass.isEmpty()) {
-//            errorPassword.setForeground(Color.RED);
-//            errorPassword.setText("Password is required");
-//            errorPassword.setForeground(Color.RED);
-//        } else {
-//            errorPassword.setForeground(Color.BLACK);
-//            errorPassword.setText("");
-//        }
-//
-//        password.repaint();
+        String pass = password.getText();
+
+        if (pass.isEmpty()) {
+            errorPassword.setForeground(Color.RED);
+            errorPassword.setText("Password is required");
+            errorPassword.setForeground(Color.RED);
+        } else {
+            errorPassword.setForeground(Color.BLACK);
+            errorPassword.setText("");
+        }
+
+        password.repaint();
            hide.setVisible(true);
            show.setVisible(false);
     }//GEN-LAST:event_passwordFocusLost

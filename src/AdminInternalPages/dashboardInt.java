@@ -65,7 +65,7 @@ public class dashboardInt extends javax.swing.JInternalFrame {
         delete = new javax.swing.JLabel();
         dashboardPanel = new javax.swing.JPanel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         dashboardInternal.setBackground(new java.awt.Color(255, 255, 255));
@@ -203,7 +203,7 @@ public class dashboardInt extends javax.swing.JInternalFrame {
             .addGap(0, 450, Short.MAX_VALUE)
         );
 
-        dashboardInternal.getContentPane().add(dashboardPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 450));
+        dashboardInternal.getContentPane().add(dashboardPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 720, 450));
 
         getContentPane().add(dashboardInternal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 490));
 

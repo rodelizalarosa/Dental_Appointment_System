@@ -4,12 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/Authentication/LogIn.java</file>
-            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/Config/Session.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/AdminInternalPages/profileInternal.java</file>
             <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/Dashboard/AdminDash.java</file>
-            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/AdminInternalPages/addUser.java</file>
             <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/Authentication/Register.java</file>
             <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/AdminInternalPages/profileInt.java</file>
-            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/AdminInternalPages/dashboardInt.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/AdminInternalPages/dashInternal.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/AdminInternalPages/userADD.java</file>
             <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/Config/ConnectDB.java</file>
         </group>
     </open-files>

@@ -14,7 +14,7 @@ public class AdminDash extends javax.swing.JFrame {
     public AdminDash() {
         
         initComponents();
-        showDashboard();
+        showUser();
         Session.getInstance().setDesktopPane(mainDesktop);
     }
 
@@ -144,6 +144,9 @@ public class AdminDash extends javax.swing.JFrame {
 
         userPanel.setBackground(new java.awt.Color(0, 51, 51));
         userPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                userPanelMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 userPanelMouseEntered(evt);
             }
@@ -302,14 +305,14 @@ public class AdminDash extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void showDashboard() {
-        dashboardInt dash = new dashboardInt();
+    private void showUser() {
+        userInternal dash = new userInternal();
         mainDesktop.add(dash);
         dash.setVisible(true);
     }
     
     private void showProfile() {
-        profileInt prof = new profileInt();
+        profileInternal prof = new profileInternal();
         mainDesktop.add(prof);
         prof.setVisible(true);
     }
@@ -387,7 +390,7 @@ public class AdminDash extends javax.swing.JFrame {
     }//GEN-LAST:event_dashPanelMouseExited
 
     private void dashPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dashPanelMouseClicked
-        showDashboard();
+       
     }//GEN-LAST:event_dashPanelMouseClicked
 
     private void profilePanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_profilePanelMouseClicked
@@ -413,6 +416,10 @@ public class AdminDash extends javax.swing.JFrame {
             this.dispose();
         }
     }//GEN-LAST:event_logoutPanelMouseClicked
+
+    private void userPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_userPanelMouseClicked
+        showUser();
+    }//GEN-LAST:event_userPanelMouseClicked
 
     
     public static void main(String args[]) {

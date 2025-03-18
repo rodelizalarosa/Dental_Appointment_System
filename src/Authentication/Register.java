@@ -168,6 +168,7 @@ public class Register extends javax.swing.JFrame {
         regPanel.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 230, 40));
 
         userName.setBackground(new java.awt.Color(204, 255, 204));
+        userName.setFont(new java.awt.Font("Trebuchet MS", 0, 15)); // NOI18N
         userName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 userNameFocusLost(evt);
@@ -181,6 +182,7 @@ public class Register extends javax.swing.JFrame {
         regPanel.add(userName, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 250, 40));
 
         Email.setBackground(new java.awt.Color(204, 255, 204));
+        Email.setFont(new java.awt.Font("Trebuchet MS", 0, 15)); // NOI18N
         Email.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 EmailFocusLost(evt);
@@ -194,7 +196,7 @@ public class Register extends javax.swing.JFrame {
         regPanel.add(Email, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 250, 40));
 
         Role.setBackground(new java.awt.Color(204, 255, 204));
-        Role.setFont(new java.awt.Font("Tw Cen MT", 0, 14)); // NOI18N
+        Role.setFont(new java.awt.Font("Tw Cen MT", 0, 15)); // NOI18N
         Role.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "   Select a role", "   Admin", "   Patient", "   Dentist" }));
         Role.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
@@ -204,6 +206,7 @@ public class Register extends javax.swing.JFrame {
         regPanel.add(Role, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 250, 40));
 
         Password.setBackground(new java.awt.Color(204, 255, 204));
+        Password.setFont(new java.awt.Font("Trebuchet MS", 0, 15)); // NOI18N
         Password.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 PasswordFocusLost(evt);
