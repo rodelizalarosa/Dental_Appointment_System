@@ -46,53 +46,75 @@ public class userUPDATE extends javax.swing.JInternalFrame {
             }
         });
     }
+    
+    private String hashPassword(String password) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hashedBytes = md.digest(password.getBytes());
+
+            StringBuilder hexString = new StringBuilder();
+            for (byte b : hashedBytes) {
+                hexString.append(String.format("%02x", b));
+            }
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            JOptionPane.showMessageDialog(this, "Hashing error", "Error", JOptionPane.ERROR_MESSAGE);
+            return null;
+        }
+    }
 
     private void saveChanges() {
         try {
-            ConnectDB db = new ConnectDB();
-            Connection conn = db.getConnection();
+         ConnectDB db = new ConnectDB();
+         Connection conn = db.getConnection();
 
-            // Get updated data from fields
-            String newUsername = userName.getText().trim();
-            String newEmail = Email.getText().trim();
-            String newRole = Role.getSelectedItem().toString().trim();
-            String newPassword = new String(Password.getPassword()).trim();
+         // Get updated data from fields
+         String newUsername = userName.getText().trim();
+         String newEmail = Email.getText().trim();
+         String newRole = Role.getSelectedItem().toString().trim();
+         String newPassword = new String(Password.getPassword()).trim();
 
-            // If the password field is empty, do NOT update the password
-            String query;
-            PreparedStatement ps;
+         // If the password field is empty, do NOT update the password
+         String query;
+         PreparedStatement ps;
 
-            if (newPassword.isEmpty()) {
-                query = "UPDATE users SET username=?, email=?, role=? WHERE user_id=?";
-                ps = conn.prepareStatement(query);
-                ps.setString(1, newUsername);
-                ps.setString(2, newEmail);
-                ps.setString(3, newRole);
-                ps.setInt(4, userId);
-            } else {
-                query = "UPDATE users SET username=?, email=?, role=?, password=? WHERE user_id=?";
-                ps = conn.prepareStatement(query);
-                ps.setString(1, newUsername);
-                ps.setString(2, newEmail);
-                ps.setString(3, newRole);
-                ps.setString(4, newPassword);
-                ps.setInt(5, userId);
-            }
+         if (newPassword.isEmpty()) {
+             query = "UPDATE users SET username=?, email=?, role=? WHERE user_id=?";
+             ps = conn.prepareStatement(query);
+             ps.setString(1, newUsername);
+             ps.setString(2, newEmail);
+             ps.setString(3, newRole);
+             ps.setInt(4, userId);
+         } else {
+             // Hash the new password before updating
+             String hashedPassword = hashPassword(newPassword);
+             if (hashedPassword == null) {
+                 return; // Hashing failed, don't proceed with update
+             }
 
-            int rowsUpdated = ps.executeUpdate();
-            if (rowsUpdated > 0) {
-                JOptionPane.showMessageDialog(this, "User Information Updated Successfully!");
-                this.dispose(); // Close the update form
-            } else {
-                JOptionPane.showMessageDialog(this, "Failed to Update User Information.");
-            }
+             query = "UPDATE users SET username=?, email=?, role=?, password=? WHERE user_id=?";
+             ps = conn.prepareStatement(query);
+             ps.setString(1, newUsername);
+             ps.setString(2, newEmail);
+             ps.setString(3, newRole);
+             ps.setString(4, hashedPassword); // Use the hashed password
+             ps.setInt(5, userId);
+         }
 
-            ps.close();
-            conn.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(this, "Database error: " + e.getMessage());
-        }
-    }
+         int rowsUpdated = ps.executeUpdate();
+         if (rowsUpdated > 0) {
+             JOptionPane.showMessageDialog(this, "User Information Updated Successfully!");
+             this.dispose(); // Close the update form
+         } else {
+             JOptionPane.showMessageDialog(this, "Failed to Update User Information.");
+         }
+
+         ps.close();
+         conn.close();
+     } catch (SQLException e) {
+         JOptionPane.showMessageDialog(this, "Database error: " + e.getMessage());
+     }
+ }
 
     public void setUserData(int id, String username, String email, String role) {
         this.userId = id;
