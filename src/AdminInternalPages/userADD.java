@@ -21,10 +21,8 @@ public class userADD extends javax.swing.JInternalFrame {
     public userADD() {
         initComponents();
         
-        // Remove the border
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder());
 
-        // Remove the title bar
         ((javax.swing.plaf.basic.BasicInternalFrameUI) this.getUI()).setNorthPane(null);
     }
 
