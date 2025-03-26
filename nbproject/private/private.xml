@@ -3,12 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/Authentication/LogIn.java</file>
-            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/AdminInternalPages/userUPDATE.java</file>
-            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/Dashboard/AdminDash.java</file>
-            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/Authentication/Register.java</file>
-            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/AdminInternalPages/userInternal.java</file>
-            <file>file:/C:/Users/Asus/Desktop/LAROSA/Appointment_System/src/AdminInternalPages/userADD.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Dental_Appointment_System/src/ManageUserInternalPages/userInternal.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Dental_Appointment_System/src/Config/Session.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Dental_Appointment_System/src/Dashboard/PatientDash.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Dental_Appointment_System/src/PatientInternalPages/patient_profile_internal.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Dental_Appointment_System/src/AdminInternalPages/dashAdminInternal.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Dental_Appointment_System/src/Config/ConnectDB.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Dental_Appointment_System/src/AdminInternalPages/profileInternal.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Dental_Appointment_System/src/Dashboard/AdminDash.java</file>
+            <file>file:/C:/Users/Asus/Desktop/LAROSA/Dental_Appointment_System/src/Dashboard/LogDash.java</file>
         </group>
     </open-files>
 </project-private>

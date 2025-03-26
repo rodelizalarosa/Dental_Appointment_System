@@ -1,0 +1,141 @@
+Project Name: DentaLink
+Project Title: Dental Clinic Appointment System
+
+
+Features:
+1. Authentication
+	a.  Log In
+	b. Register
+	c. Password Reset
+	d. Log Out
+
+2. Admin Page
+	2.1 Roles Page
+	   a. Get Roles
+	   b. Add Roles
+	   c. Edit Roles
+	   d. Delete Roles
+	2.2 User Status
+	   a. Get User Status
+	   b. Add User Status
+	   c. Edit User Status
+	   d. Delete User Status
+	2.3 Patient Information Page
+	   a. Get Patient Information
+	   b. Add Patient Information
+	   c. Edit Patient Information
+	   d. Archive Patient Information
+	2.4 Staff  Information Page
+	   a. Get Staff Information
+	   b. Add Staff Information
+	   c. Edit Staff Information
+	   d. Archive Staff Information
+	2.5 Doctor Information Page
+	   a. Get Doctor Information
+	   b. Add Doctor Information
+	   c. Edit Doctor Information
+ 	   d. Archive Doctor Information
+	2.6 Dental Service Page
+	   a. Get Dental Services
+	   b. Add Dental Service
+	   c. Edit Dental Service
+	   d. Delete Dental Service
+	2.7 Appointment Page
+	   a. Get Appointment
+	   b. Add Appointment
+	   c. Edit Appointment
+	   d. Delete Appointment
+	2.8 Appointment Status Page
+	   a. Get Appointment Status
+	   b. Add Appointment Status
+	   c. Edit Appointment Status
+	   d. Delete Appointment Status
+	2.9 Treatment Page
+	   a. Get Treatment 
+	   b. Add Treatment 
+	   c. Edit Treatment 
+	   d. Delete Treatment 
+	3.0 Treatment Status Page
+	   a. Get Treatment Status
+	   b. Add Treatment Status
+	   c. Edit Treatment Status
+	   d. Delete Treatment Status
+	3.1 Payment Page
+	   a. Get Payment 
+	   b. Add Payment 
+	   c. Edit Payment 
+	   d. Delete Payment 
+	3.2 Payment Status
+	   a. Get Payment Status
+	   b. Add Payment Status
+	   c. Edit Payment Status
+	   d. Delete Payment Status
+
+3. Patient Page
+	3.1 Patient Information Page
+	   a. Get Patient Information
+	   b. Add Patient Information
+	   c. Edit Patient Information
+	3.2 Appointment Page
+	   a. Get Appointment
+	   b. Add Appointment
+	   c. Edit Appointment
+	3.3 Appointment Status Page
+	   a. Get Appointment Status
+	3.4 Payment Page
+	   a. Get Payment 
+	   b. Add Payment 
+	   c. Edit Payment  
+	3.5 Payment Status
+	   a. Get Payment Status
+
+4. Staff
+	4.1 Staff  Information Page
+	   a. Get Staff Information
+	   b. Add Staff Information
+	   c. Edit Staff Information
+	4.2 Patient Information Page
+	   a. Get Patient Information
+	   b. Add Patient Information
+	   c. Edit Patient Information
+	4.3 Doctor Information Page
+	   a. Get Doctor Information
+	   b. Add Doctor Information
+	   c. Edit Doctor Information
+	4.4 Appointment Page
+	   a. Get Appointment
+	   b. Add Appointment
+	   c. Edit Appointment
+	   d. Delete Appointment
+	4.5 Appointment Status Page
+	   a. Get Appointment Status
+	   b. Add Appointment Status
+	   c. Edit Appointment Status
+	   d. Delete Appointment Status
+	4.6 Payment Page
+	   a. Get Payment 
+	   b. Add Payment 
+	   c. Edit Payment 
+	   d. Delete Payment 
+	4.7 Payment Status
+	   a. Get Payment Status
+	   b. Add Payment Status
+	   c. Edit Payment Status
+	   d. Delete Payment Status
+
+5. Doctor
+	5.1 Doctor Information Page
+	   a. Get Doctor Information
+	   b. Add Doctor Information
+	   c. Edit Doctor Information
+	5.2 Treatment Page
+	   a. Get Treatment 
+	   b. Add Treatment 
+	   c. Edit Treatment 
+	   d. Delete Treatment 
+	5.3 Treatment Status Page
+	   a. Get Treatment Status
+	   b. Add Treatment Status
+	   c. Edit Treatment Status
+	   d. Delete Treatment Status
+

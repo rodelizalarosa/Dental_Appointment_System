@@ -1,16 +1,44 @@
-
 package Config;
 
 import javax.swing.JDesktopPane;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class Session {
     private static Session instance;
-    private int userId;
+    private int userId; 
     private String username;
     private String email;
     private JDesktopPane mainDesktop;
 
-    private Session() {} // Private constructor to enforce Singleton pattern
+    // Private constructor to enforce Singleton pattern
+    public Session() {}
+    
+    public void logEvent(String event, String description) {
+        // Ensure a valid user is logged in before logging events
+        if (userId == 0) {
+            System.out.println("⚠ No user logged in. Skipping log event.");
+            return;
+        }
+
+        String sql = "INSERT INTO logs (u_id, l_event, l_description) VALUES (?, ?, ?)";
+
+        try (Connection con = ConnectDB.getConnection();
+             PreparedStatement pstmt = con.prepareStatement(sql)) {
+
+            pstmt.setInt(1, userId);  // Automatically use logged-in user ID
+            pstmt.setString(2, event);
+            pstmt.setString(3, description);
+            pstmt.executeUpdate();
+
+        } catch (Exception e) {
+            System.err.println("❌ Error logging event: " + e.getMessage());
+        }
+    }
+
+    
+
 
     public static Session getInstance() {
         if (instance == null) {
@@ -43,5 +71,13 @@ public class Session {
 
     public JDesktopPane getDesktopPane() {
         return mainDesktop;
+    }
+
+    public void setUserId(int id) {
+        this.userId = id;
+    }
+
+    public Integer getCurrentUserId() {
+        return userId; // Corrected: Returns the stored userId
     }
 }

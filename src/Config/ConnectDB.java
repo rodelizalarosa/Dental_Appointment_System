@@ -10,7 +10,7 @@ import java.sql.SQLException;
 
 public class ConnectDB {
     
-            private Connection connect;
+            public static Connection connect;
 
             public ConnectDB(){
                 try{
@@ -21,7 +21,7 @@ public class ConnectDB {
                 }
             }
       
-            public Connection getConnection() {
+            public static Connection getConnection() {
                 return connect;
             }
             
