@@ -17,12 +17,14 @@ public class Session {
     
     public void logEvent(String event, String description) {
         // Ensure a valid user is logged in before logging events
-        if (userId == 0) {
+
+        
+        if (userId == 0) {  
             System.out.println("⚠ No user logged in. Skipping log event.");
             return;
         }
 
-        String sql = "INSERT INTO logs (u_id, l_event, l_description) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO logs (user_id, log_event, log_description) VALUES (?, ?, ?)";
 
         try (Connection con = ConnectDB.getConnection();
              PreparedStatement pstmt = con.prepareStatement(sql)) {

@@ -52,4 +52,6 @@ public class ConnectDB {
                     System.err.println("Error closing connection: " + ex.getMessage());
                 }
             }
+            
+            // -- Logs
 }

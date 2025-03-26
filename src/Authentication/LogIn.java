@@ -219,6 +219,7 @@ public class LogIn extends javax.swing.JFrame {
         } else {
             ConnectDB db = new ConnectDB();
             Connection con = db.getConnection();
+            Session sess = new Session();
             String sql = "SELECT user_id, u_password, u_status, u_role FROM users WHERE u_username = ?";
 
             try {
@@ -236,8 +237,8 @@ public class LogIn extends javax.swing.JFrame {
                         if ("Pending".equalsIgnoreCase(status)) {
                             JOptionPane.showMessageDialog(this, "Your account is pending approval.", "Login Error", JOptionPane.ERROR_MESSAGE);
                         } else {
-                            Session.getInstance().setUser(userId, user, roleFromDB);
-                            
+                            sess.setUser(userId, user, roleFromDB);
+                            sess.logEvent("Login ", "User Logged in");
                             JOptionPane.showMessageDialog(this, "Login successful! You are logged in as " + roleFromDB + ".", "Success", JOptionPane.INFORMATION_MESSAGE);
                             this.dispose();
 
@@ -246,13 +247,15 @@ public class LogIn extends javax.swing.JFrame {
                             } else if ("Patient".equalsIgnoreCase(roleFromDB)) {
                                 new PatientDash().setVisible(true);
                             } else if ("Dentist".equalsIgnoreCase(roleFromDB)) {
-                                //new DentistDash().setVisible(true);
+                                //new DentistDas6h().setVisible(true);
                             }
                         }
                     } else {
+                        sess.logEvent( "Login ", "User attempted login");
                         JOptionPane.showMessageDialog(this, "Invalid username or password.", "Login Error", JOptionPane.ERROR_MESSAGE);
                     }
                 } else {
+                    sess.logEvent( "Login ", "User attempted login");
                     JOptionPane.showMessageDialog(this, "Invalid username or password.", "Login Error", JOptionPane.ERROR_MESSAGE);
                 }
 
